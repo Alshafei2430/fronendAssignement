@@ -1,7 +1,9 @@
 import axios from "axios";
 import { User } from "../components/MTable";
 
-const apiBaseUrl = import.meta.env.VITE_API_BASE_URL; //"https://crudcrud.com/api/2289275c7339463c8105cd348dbd29fd"
+const apiBaseUrl =
+  import.meta.env.VITE_API_BASE_URL ||
+  "https://crudcrud.com/api/2289275c7339463c8105cd348dbd29fd";
 if (!apiBaseUrl) {
   throw new Error("Add your api url to .env file");
 }
